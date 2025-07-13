@@ -118,6 +118,9 @@ const setPath = () => {
       // Otherwise, create the route and save it for reuse
       activeRoute = L.Routing.control({
         waypoints: [from, to],
+        router: new L.Routing.OSRMv1({
+          serviceUrl: 'https://tracking-osrm-production.up.railway.app/route/v1'
+        }),
         routeWhileDragging: false,
         addWaypoints: false,
         show: false,
