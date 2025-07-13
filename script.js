@@ -1,4 +1,4 @@
-const socket = io("http://127.0.0.1:3000");
+const socket = io("https://tracking.revvy.one/");
 
 socket.on("connect", () => {
   console.log("Connected to Socket.IO server:", socket.id);
